@@ -1,0 +1,83 @@
+=====================================================================================
+SMSM Firmware v100 - Quick Reference MIDI Mapping by little-scale
+http://www.little-scale.blogspot.com.au/
+seb.tomczak@gmail.com
+=====================================================================================
+Firmware v100 Version Information: 
+* Initial release
+=====================================================================================
+MIDI Channel Sound Chip Mapping
+* SN76489 PSG sound chip is mapped to MIDI channels 1 - 4. 
+* SN76489 PSG sound chip is mapped to MIDI channels 5 - 14.
+=====================================================================================
+SN76489 PSG Sound Chip Mapping
+-------------------------------------------------------------------------------------
+Global Chip Control					CC		Data Range
+* Tuning Mode (PAL / NTSC)				83		2
+-------------------------------------------------------------------------------------
+Channel / Voice Control					CC		Data Range
+* Frequency						MIDI Note
+* Frequency						Pitch Bend
+* Amplitude						Velocity
+* Amplitude						11		16
+* Coarse Tuning						42		128
+* Amplitude Modulation Enable 				70		2
+* Amplitude Modulation Speed				18		128
+* Amplitude Modulation Depth				19		128
+* Vibrato Modulation Enable 				71		2
+* Vibrato Modulation Speed				20		128
+* Vibrato Modulation Depth				21		128
+-------------------------------------------------------------------------------------
+Channel 2 Control
+* Sample Mode Enable					78		2
+* Sample Playback Speed					86		128
+-------------------------------------------------------------------------------------
+Channel 3 and 4 Control
+* Bass Mode Enable					85		2
+-------------------------------------------------------------------------------------
+Channel 4 Control					Type
+* C and C#						High Frequency; Periodic Type
+* D and D#						Medium Frequency; Periodic Type
+* E							Low Frequency; Periodic Type
+* F							High Frequency; Noise Type
+* F#							Medium Frequency; Noise Type
+* G and G#						Low Frequency; Noise Type
+* A and A#						Channel 9; Periodic Type
+* B							Channel 9; Noise Type
+=====================================================================================
+YM2413 FM Sound Chip Mapping
+-------------------------------------------------------------------------------------
+YM2413 FM Sound Chip Global Control			CC		Data Range
+* Sustain Mode Enable					70		2
+* Percussion Mode Enable				        78		2
+* Pitch Bend Resolution					79		128
+* Set Octave Division					80		128
+* Set the value of A in Hz (above 381 Hz; 63 = 440)	81		128
+* Select preset instrument for a channel                14              16
+-------------------------------------------------------------------------------------
+Custom Voice Control					CC		Data Range
+* Amplitude Modulation Enable (Modulator)		15		2
+* Amplitude Modulation Enable (Carrier)			16		2
+* Vibrato Enable (Modulator)				17		2
+* Vibrato Enable (Carrier)				18		2
+* EG Type (Modulator)					19		2
+* EG Type (Carrier)					20		2
+* KSR Enable (Modulator)				        21		2
+* KSR Enable (Carrier)					22		2
+* Multiplier (Modulator)				        23		16
+* Multiplier (Carrier)					24		16
+* KSL (Modulator)					25		4
+* KSL (Carrier)						26		4
+* TL Modulation						27		64
+* Rectify (Modulator)					28		2
+* Rectify (Carrier)					29		2
+* FM Feedback (Modulator)				30		8
+* Attack (Modulator)					31		16
+* Decay (Modulator)					32		16
+* Sustain (Modulator)					33		16
+* Release (Modulator)					34		16
+* Attack (Carrier)					35		16
+* Decay (Carrier)					36		16
+* Sustain (Carrier)					37		16
+* Release (Carrier)					38		16
+=====================================================================================
